@@ -2,28 +2,35 @@
 <head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="/js/libs/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="/js/libs/jquery.fileupload.js"></script> 
+<script type="text/javascript" src="/js/libs/jquery.fileupload.js"></script>
 <script type="text/javascript" src="/js/libs/jquery.form.js"></script>
-<script type="text/javascript" src="/js/libs/sha1.js"></script> 
-<script type="text/javascript" src="/js/siirrin.js"></script> 
-<link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
+<script type="text/javascript" src="/js/libs/sha1.js"></script>
+<script type="text/javascript" src="/js/siirrin.js"></script>
+<link rel="stylesheet" href="/css/siirrin.css" type="text/css" />
+<link rel="stylesheet" href="/css/branding.css" type="text/css" />
 </head>
 <body>
 
-<div id="login">
-<form id="login-form" action="" method="">
+<div id="div_login_form">
+<form id="login_form" action="" method="GET">
+<p>Please login</p>
 Bucket: <input type="text" name="bucket" value="" />
 <br />
 AWS Access key ID (Username): <input type="text" name="aws_access_key_id" value="" />
 <br />
 AWS Secret Access Key (Password): <input type="text" name="aws_secret_access_key" value="" />
 <br />
+<input type="submit" value="Login" />
 </form>
+</div>
+
+<div id="div_logout_form">
+LOGOUT?
 </div>
 
 <div id="bucketlist"></div>
 
-<div id="div-upload-form">
+<div id="div_upload_form">
 <form id="upload_form" action="/" method="post" enctype="multipart/form-data">
     <input type="file" id="fileupload" name="file">
     <input type="submit" value="Save">
@@ -32,11 +39,7 @@ AWS Secret Access Key (Password): <input type="text" name="aws_secret_access_key
 
 <script>
 var siirrin = new Siirrin;
-siirrin.init_login_form('#login-form');
-siirrin.set_aws_access_key_id('AKIAJKXYJTZJTCBYXOFQ');
-siirrin.set_bucket_name('finnair.transfer.frantic.com');
-siirrin.set_secret_dir('rename-me');
-siirrin.init({'qs': location.search, 'fileupload_field': '#fileupload', 'bucketlist_div': '#bucketlist'});
+siirrin.init({'qs': location.search, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist'});
 </script>
 
 </body>

@@ -1,0 +1,10 @@
+body {
+     background-color: #ccc;
+}
+div {
+    background-color: #fff;
+}
+
+div#bucketlist { display: none; }
+div#div_upload_form { display: none; }
+div#div_logout_form { display: none; }
