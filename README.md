@@ -39,6 +39,8 @@ Select the "Website Access" tab in Properties. Check Enabled [X], specify
 "index.html" as the Index Document and "error.html" as the Error Document.
 Note the endpoint Amazon gives to you and write it down. Press Save.
 
+*Upload all files of Siirrin to the root of the website bucket you just created.
+
 Setup: The bucket for a single customer's data
 ==============================================
 *Add the bucket
