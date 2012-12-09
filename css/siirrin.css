@@ -1,0 +1,35 @@
+body {
+     background-color: #ccc;
+}
+div {
+    background-color: #fff;
+}
+
+div#div_login_form span { width: 300px; display: inline-block; }
+div#div_login_form input[type="text"] { width: 200px; }
+
+div#bucketlist { display: none; }
+div#div_upload_form { display: none; }
+div#div_logout_form { display: none; }
+div#login_error { display: none; background-color: #f00; padding: 5px; width: auto; }
+
+/* Dropzone effect */
+
+#div_upload_form { padding: 20px; background: palegreen; width: 400px; height: 60px; text-align: left; }
+#div_upload_form.in {
+    width: 600px;
+    height: 120px;
+    font-size: larger;
+    text-align: center;
+}
+#div_upload_form.hover {
+    background: lawngreen;
+}
+#div_upload_form.fade {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}

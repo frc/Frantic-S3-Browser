@@ -1,1 +1,50 @@
-My GitHub Page
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.fileupload.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.form.js"></script>
+<script type="text/javascript" src="/js/libs/sha1.js"></script>
+<script type="text/javascript" src="/js/siirrin.js"></script>
+<link rel="stylesheet" href="/css/siirrin.css" type="text/css" />
+<link rel="stylesheet" href="/css/branding.css" type="text/css" />
+</head>
+<body>
+
+<div id="div_login_form">
+<form id="login_form" action="" method="GET">
+<h2>Please login</h2>
+<span for="bucket">Bucket: </span><input type="text" name="bucket" value="" />
+<br />
+<span for="aws_access_key_id">AWS Access key ID (Username): </span><input type="text" name="aws_access_key_id" value="" />
+<br />
+<span for="aws_secret_access_key">AWS Secret Access Key (Password): </span><input type="text" name="aws_secret_access_key" value="" />
+<br />
+<input type="submit" value="Login" />
+</form>
+<div id="login_error">Login failed. Please check the information and try again.</div>
+</div>
+
+<div id="div_logout_form">
+<a href="/">Logout</a>
+</div>
+
+<div id="bucketlist"></div>
+
+<div id="div_upload_form" class="fade well">
+<form id="upload_form" action="/" method="post" enctype="multipart/form-data">
+Select file to upload: 
+    <input type="file" id="fileupload" name="file" />
+<!--    <input type="submit" value="Save"> -->
+</form>
+or just drop the files here to upload them immediately.
+</div>
+
+<script>
+var siirrin = new Siirrin;
+siirrin.init({'qs': location.search, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
+</script>
+
+</body>
+</html>
+
