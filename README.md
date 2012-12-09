@@ -82,8 +82,8 @@ Setup: The bucket for a single customer's/project's data
 
  - Repeat this procedure for each customer/project bucket you need.
 
-Setup: Customizing Siirrin
-==========================
+Setup: Customizing Siirrin look and feel
+========================================
 Edit css/branding.css.
 
 
