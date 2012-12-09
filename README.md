@@ -10,6 +10,9 @@ to S3 enabling you and your users to download and upload files in buckets.
 
 Setup: The website bucket for Siirrin
 =====================================
+( If you want to quickly try out Siirrin you can skip this step and just use
+http://frc.github.com/Siirrin-Amazon-S3-HTML5-file-browser-and-uploader/ )
+
  - Add a new bucket using https://console.aws.amazon.com/s3/home - pay attention
    that you place the bucket in the region you want it to be in. This bucket
    is used to serve the login website to your users. You can customize it to match
