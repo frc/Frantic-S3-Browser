@@ -5,9 +5,13 @@ div {
     background-color: #fff;
 }
 
+div#div_login_form span { width: 300px; display: inline-block; }
+div#div_login_form input[type="text"] { width: 200px; }
+
 div#bucketlist { display: none; }
 div#div_upload_form { display: none; }
 div#div_logout_form { display: none; }
+div#login_error { display: none; background-color: #f00; padding: 5px; width: auto; }
 
 /* Dropzone effect */
 

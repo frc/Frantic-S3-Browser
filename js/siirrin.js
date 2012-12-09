@@ -11,6 +11,7 @@ var Siirrin = function () {
     var aws_secret_access_key;
     var aws_signature;
     var $login_form;
+    var $login_error;
     var $logout_form;
     var $div_logout_form;
     var $bucketlist;
@@ -131,6 +132,7 @@ var Siirrin = function () {
                         cache: false,
                         success: function(data) {
                             $login_form.hide();
+                            $login_error.hide();
                             $div_logout_form.show();
                             $bucketlist.show();
                             $div_upload_form.show();
@@ -143,7 +145,7 @@ var Siirrin = function () {
                             generate_bucket_listing(files);
                         },
                         error: function(data) {
-                            alert(data);
+                            $login_error.show();
                         }
                     });
             });
@@ -176,8 +178,9 @@ var Siirrin = function () {
         return false;
     };
 
-    var init_login_form = function (form_selector) {
+    var init_login_form = function (form_selector, login_error_selector) {
         $login_form = jQuery(form_selector);
+        $login_error = jQuery(login_error_selector);
         $login_form.ajaxForm({beforeSubmit: login_form_beforeSubmit});
     };
 
@@ -231,7 +234,7 @@ var Siirrin = function () {
             set_aws_access_key_id(args);
         },
         init: function (args) {
-            init_login_form(args.login_form);
+            init_login_form(args.login_form, args.login_error);
             init_logout_form(args.logout_form, args.div_logout_form);
             init_from_qs(args.qs);
             set_bucketlist(args.bucketlist);

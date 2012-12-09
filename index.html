@@ -13,15 +13,16 @@
 
 <div id="div_login_form">
 <form id="login_form" action="" method="GET">
-<p>Please login</p>
-Bucket: <input type="text" name="bucket" value="" />
+<h2>Please login</h2>
+<span for="bucket">Bucket: </span><input type="text" name="bucket" value="" />
 <br />
-AWS Access key ID (Username): <input type="text" name="aws_access_key_id" value="" />
+<span for="aws_access_key_id">AWS Access key ID (Username): </span><input type="text" name="aws_access_key_id" value="" />
 <br />
-AWS Secret Access Key (Password): <input type="text" name="aws_secret_access_key" value="" />
+<span for="aws_secret_access_key">AWS Secret Access Key (Password): </span><input type="text" name="aws_secret_access_key" value="" />
 <br />
 <input type="submit" value="Login" />
 </form>
+<div id="login_error">Login failed. Please check the information and try again.</div>
 </div>
 
 <div id="div_logout_form">
@@ -41,7 +42,7 @@ or just drop the files here to upload them immediately.
 
 <script>
 var siirrin = new Siirrin;
-siirrin.init({'qs': location.search, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist'});
+siirrin.init({'qs': location.search, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
 </script>
 
 </body>
