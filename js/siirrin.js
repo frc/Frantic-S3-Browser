@@ -206,6 +206,27 @@ var Siirrin = function () {
             }
     };
 
+    var init_dropzone_effect = function () {
+        $(document).bind('dragover', function (e) {
+                var dropZone = $div_upload_form,
+                timeout = window.dropZoneTimeout;
+                if (!timeout) {
+                    dropZone.addClass('in');
+                } else {
+                    clearTimeout(timeout);
+                }
+                if (e.target === dropZone[0]) {
+                    dropZone.addClass('hover');
+                } else {
+                    dropZone.removeClass('hover');
+                }
+                window.dropZoneTimeout = setTimeout(function () {
+                        window.dropZoneTimeout = null;
+                        dropZone.removeClass('in hover');
+                }, 100);
+        });
+    };
+
     return {
         set_aws_access_key_id: function (args) {
             set_aws_access_key_id(args);
@@ -217,9 +238,8 @@ var Siirrin = function () {
             set_bucketlist(args.bucketlist);
             set_fileupload_field(args.fileupload_field);
             set_div_upload_form(args.div_upload_form);
+            init_dropzone_effect();
             init_autosubmit();
         }
     };
 };
-
-//  Load page with your secret access key as the query string. you will get a signature. Do not share your secret access key or write it in the files.
