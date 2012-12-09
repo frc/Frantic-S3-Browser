@@ -1,4 +1,4 @@
-/*jslint devel: true, browser: true, unparam: true, vars: true, white: true, passfail: false, nomen: true, maxerr: 50, indent: 4 */
+/*jslint devel: true, browser: true, unparam: true, vars: true, white: true, passfail: false, nomen: true, maxerr: 50, indent: 4, todo: true */
 
 // This is a global variable of sha1.js and needs to be set for proper b64 encoded string.
 b64pad = "="; // needed for "strict RFC compliance"
@@ -64,23 +64,25 @@ var Siirrin = function () {
     var sign_api = function (expires, resource) {
         var http_verb = 'GET';
         var canonicalized_resource = '/' + bucket + resource;
-        var string_to_sign = http_verb + "\n" + '' + "\n" + '' + "\n" + expires + "\n" + '' + canonicalized_resource;
+        var string_to_sign = http_verb + "\n\n\n" + expires + "\n" + canonicalized_resource;
         var sig = b64_hmac_sha1(aws_secret_access_key, string_to_sign);
         return sig;
     };
 
     var location_querystring = function (location_search) {
-            var result = {};
-            var querystring = location.search;
-            if (!querystring)
-                return result;
-            var pairs = querystring.substring(1).split("&");
-            var splitPair;
-            for (var i = 0; i < pairs.length; i++) {
-                splitPair = pairs[i].split("=");
-                result[decodeURIComponent(splitPair[0])] = decodeURIComponent(splitPair[1]);
-            }
+        var i;
+        var result = {};
+        var querystring = location.search;
+        if (!querystring) {
             return result;
+        }
+        var pairs = querystring.substring(1).split("&");
+        var splitPair;
+        for (i=0; i < pairs.length; i++) {
+            splitPair = pairs[i].split("=");
+            result[decodeURIComponent(splitPair[0])] = decodeURIComponent(splitPair[1]);
+        }
+        return result;
     };
 
     var sign = function(aws_secret_access_key, string_to_sign) {
@@ -91,8 +93,9 @@ var Siirrin = function () {
     };
 
     var generate_bucket_listing = function (files) {
+        var i;
         var out = '<ul class="root">';
-        for (var i = 0; i < files.length; i++) {
+        for (i=0; i < files.length; i++) {
             var name = files[i];
 
             // Skip files that end with a ~
@@ -124,7 +127,7 @@ var Siirrin = function () {
         expires = parseInt(expires/1000); // milliseconds to seconds
         expires += 21600; // signed request valid for 6 hours
         var signature = sign_api(expires, '/');
-        $(function() {
+        jQuery(function() {
                 $.ajax({
                         url: protocolurl + bucket + s3url + '/',
                         data: {'AWSAccessKeyId': aws_access_key_id, 'Signature': signature, 'Expires': expires},
@@ -136,10 +139,11 @@ var Siirrin = function () {
                             $div_logout_form.show();
                             $bucketlist.show();
                             $div_upload_form.show();
-                            var contents = $(data).find('Contents');
+                            var contents = jQuery(data).find('Contents');
                             var files = [];
-                            for (var i = 0; i < contents.length; i++) {
-                                files.push($(contents[i]).find('Key').text());
+                            var i;
+                            for (i = 0; i < contents.length; i++) {
+                                files.push(jQuery(contents[i]).find('Key').text());
                             }
                             files.sort();
                             generate_bucket_listing(files);
@@ -209,7 +213,7 @@ var Siirrin = function () {
     };
 
     var init_dropzone_effect = function () {
-        $(document).bind('dragover', function (e) {
+        jQuery(document).bind('dragover', function (e) {
                 var dropZone = $div_upload_form,
                 timeout = window.dropZoneTimeout;
                 if (!timeout) {
