@@ -64,7 +64,6 @@ var Siirrin = function () {
         var http_verb = 'GET';
         var canonicalized_resource = '/' + bucket + resource;
         var string_to_sign = http_verb + "\n" + '' + "\n" + '' + "\n" + expires + "\n" + '' + canonicalized_resource;
-        console.log(string_to_sign);
         var sig = b64_hmac_sha1(aws_secret_access_key, string_to_sign);
         return sig;
     };
