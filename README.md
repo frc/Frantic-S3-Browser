@@ -1,21 +1,24 @@
 Siirrin-HTML5-file-browser-and-uploader-for-Amazon-S3
-=============================================
+=====================================================
 
 Siirrin is a file browser and uploader for Amazon S3. Fully HTML5 based,
 no server needed.
 
+You can serve Siirrin from a single bucket and then create a bucket for each
+customer/project you want to serve. Siirrin is simply a browser-based client
+to S3 enabling you and your users to download and upload files in buckets.
+
 Setup: The website bucket for Siirrin
 =====================================
 *Add a new bucket using https://console.aws.amazon.com/s3/home - pay attention
-taht you place the bucket in the region you want it to be in. This bucket
-is called "the website bucket" in the Siirrin documentation and is used
-to serve the login website to your users. You can customize it to match
+that you place the bucket in the region you want it to be in. This bucket
+is used to serve the login website to your users. You can customize it to match
 your brand.
 
 *Add Bucket Policy for Website Access
 Select the bucket, press "Properties". In the Permissions tab press
 "Add Bucket Policy". Paste this in, replacing "YOURBUCKETNAME" with the name
-of your bucket:
+of your bucket, and save the policy:
 
 {
     "Version": "2008-10-17",
@@ -31,8 +34,6 @@ of your bucket:
              }
     ]
 }
-
-Save the policy.
 
 *Enable Website Access
 Select the "Website Access" tab in Properties. Check Enabled [X], specify
@@ -50,15 +51,15 @@ that you place the bucket in the region you want it to be in.
 *Add a CORS policy to enable API requests
 Go back to Permissions tab and press "Add a CORS policy". Paste this in:
 
-<?xml version="1.0" encoding="UTF-8"?>
-<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-    <CORSRule>
-        <AllowedOrigin>*</AllowedOrigin>
-        <AllowedMethod>POST</AllowedMethod>
-        <AllowedMethod>GET</AllowedMethod>
-        <AllowedHeader>*</AllowedHeader>
-    </CORSRule>
-</CORSConfiguration>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
+    &lt;CORSRule&gt;
+        &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
+        &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
+        &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
+        &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
+    &lt;/CORSRule&gt;
+&lt;/CORSConfiguration&gt;
 
 *Add the user to access the bucket. Go to IAM, add a new user.
 Save the Security Credentials, you will need them later in the setup.
