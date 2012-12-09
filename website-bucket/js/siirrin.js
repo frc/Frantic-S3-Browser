@@ -19,6 +19,10 @@ var Siirrin = function () {
             aws_signature = as;
     };
 
+    var set_aws_access_key_id = function (aaki) {
+        aws_access_key_id = aaki;
+    };
+
     var set_aws_secret_access_key = function (asak) {
         aws_secret_access_key = asak;
     };
@@ -118,10 +122,22 @@ var Siirrin = function () {
                 }
             });
     };
+    
+    var login_form_beforeSubmit = function (formData, jqForm, options) {
+        var formElement = jqForm[0];
+        set_aws_access_key_id(formElement.aws_access_key_id);
+        set_aws_secret_access_key(formElement.aws_secret_access_key);
+        set_aws_signature(sign(aws_secret_access_key, aws_policy_document_b64));
+        return false;
+    };
+
+    var init_login_form = function (form_selector) {
+        jQuery(form_selector).ajaxform({beforeSubmit: login_form_beforeSubmit});
+    };
 
     return {
-        set_aws_access_key_id: function (aaki) {
-            aws_access_key_id = aaki;
+        set_aws_access_key_id: function (args) {
+            set_aws_access_key_id(args);
         },
         set_bucket_name: function (bn) {
             bucket_name = bn;
@@ -129,6 +145,9 @@ var Siirrin = function () {
         set_secret_dir: function (sd) {
             secret_dir = sd;
         },
+	init_login_form: function (args) {
+            init_login_form(args);
+	},
         init: function (args) {
             make_aws_policy_document();
 
