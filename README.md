@@ -1,7 +1,8 @@
-HTML5-file-browser-and-uploader-for-Amazon-S3
+Siirrin-HTML5-file-browser-and-uploader-for-Amazon-S3
 =============================================
 
-File browser and uploader for Amazon S3. Fully HTML5 based, no server needed.
+Siirrin is a file browser and uploader for Amazon S3. Fully HTML5 based,
+no server needed.
 
 Setup
 =========
@@ -105,11 +106,3 @@ sha1.js
  See http://pajhome.org.uk/crypt/md5 for details.
 
  - from http://pajhome.org.uk/crypt/md5/sha1.html
-
-sha1-alternative.js
- Version 2.1a Copyright Paul Johnston 2000 - 2002.
- Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
- Distributed under the BSD License
- See http://pajhome.org.uk/crypt/md5 for details.
-
- - from http://pajhome.org.uk/crypt/md5/sha1.js
