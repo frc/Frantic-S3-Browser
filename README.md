@@ -1,17 +1,17 @@
-Siirrin-HTML5-file-browser-and-uploader-for-Amazon-S3
-=====================================================
+Frantic-S3-Browser
+==================
 
-Siirrin is a file browser and uploader for Amazon S3. Fully HTML5 based,
+Frantic-S3-Browser is a file browser and uploader for Amazon S3. Fully HTML5 based,
 no server needed.
 
-You can serve Siirrin from a single bucket and then create a bucket for each
-customer/project you want to serve. Siirrin is simply a browser-based client
+You can serve Frantic-S3-Browser from a single bucket and then create a bucket for each
+customer/project you want to serve. Frantic-S3-Browser is simply a browser-based client
 to S3 enabling you and your users to download and upload files in buckets.
 
-Setup: The website bucket for Siirrin
-=====================================
-( If you want to quickly try out Siirrin you can skip this step and just use
-http://frc.github.com/Siirrin-Amazon-S3-HTML5-file-browser-and-uploader/ )
+Setup: The website bucket for Frantic-S3-Browser
+================================================
+( If you want to quickly try out Frantic-S3-Browser you can skip this step and just use
+http://frc.github.com/Frantic-S3-Browser/ )
 
  - Add a new bucket using https://console.aws.amazon.com/s3/home - pay attention
    that you place the bucket in the region you want it to be in. This bucket
@@ -43,7 +43,7 @@ http://frc.github.com/Siirrin-Amazon-S3-HTML5-file-browser-and-uploader/ )
    "index.html" as the Index Document and "error.html" as the Error Document.
    Note the endpoint Amazon gives to you and write it down. Press Save.
 
- - Upload all files of Siirrin to the root of the website bucket you just created.
+ - Upload all files of Frantic-S3-Browser to the root of the website bucket you just created.
 
 Setup: The bucket for a single customer's/project's data
 ========================================================
@@ -85,8 +85,8 @@ Setup: The bucket for a single customer's/project's data
 
  - Repeat this procedure for each customer/project bucket you need.
 
-Setup: Customizing Siirrin look and feel
-========================================
+Setup: Customizing Frantic-S3-Browser look and feel
+===================================================
 Edit css/branding.css.
 
 
@@ -98,7 +98,7 @@ http://blog.mashupguide.net/2008/11/25/amazon-s3-signature-calculation-in-javasc
 
 Copyright
 =========
-Siirrin Copyright Oskari Ojala 2012.
+Frantic-S3-Browser Copyright Oskari Ojala 2012.
  Licence undecided.
 
 sha1.js
