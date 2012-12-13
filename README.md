@@ -51,6 +51,9 @@ Setup: The bucket for a single customer's/project's data
    Add a new bucket using https://console.aws.amazon.com/s3/home - pay attention
    that you place the bucket in the region you want it to be in.
 
+ - If you want the connection to be secure (HTTPS) do not use dots in the bucket name.
+   Using dots in the bucket name will drop the connection to insecure HTTP.
+
  - Add a CORS policy to enable API requests
    Go back to Permissions tab and press "Add a CORS policy". Paste this in:
 
