@@ -106,5 +106,3 @@ sha1.js
  Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
  Distributed under the BSD License
  See http://pajhome.org.uk/crypt/md5 for details.
-
- - from http://pajhome.org.uk/crypt/md5/sha1.html
