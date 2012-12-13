@@ -3,7 +3,7 @@
 // This is a global variable of sha1.js and needs to be set for proper b64 encoded string.
 b64pad = "="; // needed for "strict RFC compliance"
 
-var Siirrin = function () {
+var FranticS3Browser = function () {
     "use strict";
     var bucket;
     var uploader_container_id;
