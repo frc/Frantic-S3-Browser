@@ -106,8 +106,7 @@ var FranticS3Browser = function () {
 
             // Skip files that end with a ~
             // Skip files that end with $folder$ (3hub files),
-            // Skip files that have /siirrin/ in path
-            if (/\$folder\$$/.exec(name) || /~$/.exec(name) || /\/siirrin\//.exec(name)) {
+            if (/\$folder\$$/.exec(name) || /~$/.exec(name)) {
                 continue;
             }
 
