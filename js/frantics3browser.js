@@ -10,6 +10,7 @@ var FranticS3Browser = function () {
     var aws_access_key_id;
     var aws_secret_access_key;
     var aws_signature;
+    var protocolurl;
     var $login_form;
     var $login_error;
     var $logout_form;
@@ -19,9 +20,8 @@ var FranticS3Browser = function () {
     var $div_upload_form;
     var qs;
 
-    var protocolurl = window.location.protocol + '//';
     var s3url = '.s3.amazonaws.com';
-    var aws_canned_acl = 'public-read';
+    var aws_canned_acl = 'private';
     var aws_policy_document;
     var aws_policy_document_b64;
 
@@ -39,6 +39,12 @@ var FranticS3Browser = function () {
 
     var set_bucket = function (bn) {
         bucket = bn;
+        // Certificate check will fail for bucket names with a dot. Use http for them, https for other buckets.
+        if (/\./.exec(bn)) {
+            protocolurl = 'http://';
+        } else {
+            protocolurl = 'https://';
+        }
     };
 
     var set_bucketlist = function (selector) {
