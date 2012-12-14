@@ -75,14 +75,13 @@ var FranticS3Browser = function () {
         return sig;
     };
 
-    var location_querystring = function (location_search) {
+    var location_hash = function (location_hash) {
         var i;
         var result = {};
-        var querystring = location.search;
-        if (!querystring) {
+        if (!location_hash) {
             return result;
         }
-        var pairs = querystring.substring(1).split("&");
+        var pairs = location_hash.substring(1).split("&");
         var splitPair;
         for (i=0; i < pairs.length; i++) {
             splitPair = pairs[i].split("=");
@@ -198,8 +197,8 @@ var FranticS3Browser = function () {
         $div_logout_form = jQuery(div_logout_form_selector);
     }
 
-    var init_from_qs = function (arg_qs) {
-            qs = location_querystring(arg_qs);
+    var init_from_hash = function (arg_hash) {
+            qs = location_hash(arg_hash);
             if (qs.bucket) {
                 $login_form.find('input[name=bucket]').val(qs.bucket);
             }
@@ -245,7 +244,7 @@ var FranticS3Browser = function () {
         init: function (args) {
             init_login_form(args.login_form, args.login_error);
             init_logout_form(args.logout_form, args.div_logout_form);
-            init_from_qs(args.qs);
+            init_from_hash(args.hash);
             set_bucketlist(args.bucketlist);
             set_fileupload_field(args.fileupload_field);
             set_div_upload_form(args.div_upload_form);
