@@ -120,7 +120,7 @@
 
 }
 
-body { background-color: #000000; color: #97d937; font-size: 30px; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; }
+body { background-color: #000000; color: #97d937; font-size: 30px; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; margin: 0px 50px; }
 div { background-color: #000000; }
 div#div_login_form input[type="text"]{ padding-left: 20px; height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; font-family: 'OpenSans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; color: #000000; }
 div#div_login_form input[type="submit"]{ clear: both; float: left; }
@@ -135,6 +135,6 @@ div#div_login_form input[type="submit"]{ clear: both; float: left; }
 
 div#login_error { background-color: #000000; clear: both; }
 
-UL.root { border-top: 1px solid #97d937; border-bottom: 1px solid #97d937;  list-style: none; }
-UL.root LI { line-height: 20px; }
+UL.root { border-top: 1px solid #97d937; border-bottom: 1px solid #97d937;  list-style: none; padding:40px; }
+UL.root LI { line-height: 20px; margin: 10px; }
 UL.root LI A { color: #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; text-decoration: none; }
