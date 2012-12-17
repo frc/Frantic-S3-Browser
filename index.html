@@ -18,9 +18,9 @@
 		<h2>Files</h2>
 	</div>
 	<form id="login_form" action="" method="GET">
-		<label for="bucket">Bucket</label><input type="text" name="bucket" id="bucket" value="" /><br />
-		<label for="aws_access_key_id">Access ID</span><input type="text" name="aws_access_key_id" id="aws_access_key_id" value="" /><br />
-		<label for="aws_secret_access_key">Password</label><input type="text" name="aws_secret_access_key" id="aws_secret_access_key" value="" /><br />
+		<div class="input_group"><label for="bucket">Bucket</label><input type="text" name="bucket" id="bucket" value="" /></div>
+		<div class="input_group"><label for="aws_access_key_id">Access ID</span><input type="text" name="aws_access_key_id" id="aws_access_key_id" value="" /></div>
+		<div class="input_group"><label for="aws_secret_access_key">Password</label><input type="text" name="aws_secret_access_key" id="aws_secret_access_key" value="" /></div>
 		<input type="submit" value="Login" />
 	</form>
 <div id="login_error">Login failed. Please check the information and try again.</div>
