@@ -1,7 +1,7 @@
 /* Add your custom CSS here */
 body { background-color: #000000; color: #97d937; font-size: 30px; }
 div { background-color: #000000; }
-input { height: 60px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; }
+div#div_login_form input[type="text"]{ height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; }
 .input_group { float: right; }
 #div_login_form { height: 330px; margin: 60px; }
 #div_login_form .theming { float: left; width: 560px; }
