@@ -140,6 +140,6 @@ UL.root LI { line-height: 20px; margin: 10px; }
 UL.root LI A { color: #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; text-decoration: none; }
 UL.root LI A:hover { text-decoration: underline; }
 
-#div_upload_form { background-color: #000000; }
+#div_upload_form { background-color: #000000; border: 3px dashed #97d937; }
 #upload_form label { font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; }
 #fake_upload { background-color: #97d937; color: #000000; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; width: 110px; }
