@@ -42,7 +42,9 @@ or just drop the files here to upload them immediately.
 
 <script>
 var frantics3browser = new FranticS3Browser;
-frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
+jQuery(document).ready(function(){
+	frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
+});
 </script>
 
 </body>
