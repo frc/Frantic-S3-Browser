@@ -4,7 +4,7 @@ div { background-color: #000000; }
 div#div_login_form input[type="text"]{ height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; }
 .input_group { float: right; }
 #div_login_form { height: 330px; margin: 60px; }
-#div_login_form .theming { float: left; width: 560px; }
-#div_login_form .theming h1 { text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; }
-#div_login_form .theming h2 { font-size: 95px; }
+#div_login_form .theming { float: left; margin-left: 300px; padding: 60px; }
+#div_login_form .theming h1 { text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; margin: 0px 0px 10px; }
+#div_login_form .theming h2 { font-size: 95px; margin: 0px; }
 #login_form { float: left; border-left: 2px solid #97d937; height: 100%; padding:60px; width: 600px; }
