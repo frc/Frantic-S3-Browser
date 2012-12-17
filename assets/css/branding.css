@@ -1,6 +1,7 @@
 /* Add your custom CSS here */
 body { background-color: #000000; color: #97d937; font-size: 30px; }
 div { background-color: #000000; }
+input { height: 60px; border: 0px; background-color: #FFFFFF; }
 #div_login_form { height: 330px; margin: 60px; }
 #div_login_form .theming { float: left; width: 560px; }
 #div_login_form .theming h1 { text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; }
