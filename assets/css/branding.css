@@ -1,7 +1,8 @@
 /* Add your custom CSS here */
-body { background-color: #000000; color: #97d937; }
+body { background-color: #000000; color: #97d937; font-size: 30px; }
 div { background-color: #000000; }
-#div_login_form { height: 330px; }
-#div_login_form .theming { float: left; }
+#div_login_form { height: 330px; margin: 60px; }
+#div_login_form .theming { float: left; width: 560px; }
 #div_login_form .theming h1 { text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; }
-#login_form { float: left; border-left: 2px solid #97d937; }
+#div_login_form .theming h2 { font-size: 95px; }
+#login_form { float: left; border-left: 2px solid #97d937; height: 100%; padding:60px; width: 600px; }
