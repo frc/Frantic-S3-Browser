@@ -136,4 +136,5 @@ div#div_login_form input[type="submit"]{ clear: both; float: left; }
 div#login_error { background-color: #000000; clear: both; }
 
 UL.root { border-top: 1px solid #97d937; border-bottom: 1px solid #97d937;  list-style: none; }
-UL.root LI { color: #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; text-decoration: none; }
+UL.root LI { line-height: 20px; }
+UL.root LI A { color: #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; text-decoration: none; }
