@@ -31,19 +31,20 @@
 </div>
 
 <div id="bucketlist"></div>
-<form id="upload_form" action="/" method="post" enctype="multipart/form-data">
-	<label for="fileupload">Select file to upload: </label><div id="fake_upload">Choose file<input type="file" id="fileupload" name="file" /></div>
-<!--    <input type="submit" value="Save"> -->
-</form>
-or just drop the files here to upload them immediately.
-<div id="div_upload_form" class="fade well">
-	Drop files here:
+<div id="upload">
+	<form id="upload_form" action="/" method="post" enctype="multipart/form-data">
+		<label for="fileupload">Select file to upload: </label><div id="fake_upload">Choose file<input type="file" id="fileupload" name="file" /></div>
+	<!--    <input type="submit" value="Save"> -->
+	</form>
+	or just drop the files here to upload them immediately.
+	<div id="div_upload_form" class="fade well">
+		Drop files here:
+	</div>
 </div>
-
 <script>
 var frantics3browser = new FranticS3Browser;
 jQuery(document).ready(function(){
-	frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#div_upload_form', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
+	frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#upload', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error'});
 });
 </script>
 
