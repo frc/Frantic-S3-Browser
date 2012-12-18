@@ -143,7 +143,7 @@ var FranticS3Browser = function () {
                             $div_logout_form.show();
                             $bucketlist.show();
                             $div_upload_form.show();
-                            $login_form.addClass('login');
+                            $("div_login_form").addClass('login');
                             var contents = jQuery(data).find('Contents');
                             var files = [];
                             var i;
