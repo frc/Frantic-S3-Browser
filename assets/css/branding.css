@@ -126,18 +126,18 @@ A { color: #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: n
 A:hover { text-decoration: underline; }
 
 div#div_login_form input[type="text"]{ padding-left: 20px; height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; font-family: 'OpenSans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; color: #000000; }
-div#div_login_form input[type="submit"]{ clear: both; float: left; }
+div#div_login_form input[type="submit"]{ clear: both; float: right; background-color: #97d937; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border: 0px; font-family: 'OpenSansLight', sans-serif; font-size: 30px; padding: 5px 30px; font-weight: normal; font-style: normal; margin-right: 10px }
 div#div_login_form.login { height: 70px; margin: 0; }
 div#div_login_form.login .theming { height: 50px; width: 100%; margin: 0px; padding: 20px 0px; }
 div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; }
 
-
+	
 .input_group { float: right; }
 #div_login_form { height: 330px; margin: 60px; }
 #div_login_form .theming { float: left; margin-left: 300px; padding: 60px; width: 250px; }
-#div_login_form .theming h1 { float: left; text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; margin: 0px 0px 10px;  }
-#div_login_form .theming h2 { float: left; font-size: 95px; margin: 0px; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; }
-#login_form { float: left; border-left: 1px solid #97d937; height: 100%; padding:60px; width: 600px; }
+#div_login_form .theming h1 { float: left; text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; margin: 0px 8px 10px;  }
+#div_login_form .theming h2 { float: left; font-size: 95px; margin: 0px; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; line-height: 90px; }
+#login_form { float: left; border-left: 1px solid #97d937; height: 100%; padding:60px; width: 500px; }
 #login_form label { font-size: 30px; color: #97d937; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; }
 #logout { float: right; font-size: 30px; color: #97d937; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; }
 
