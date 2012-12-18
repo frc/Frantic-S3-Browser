@@ -133,7 +133,7 @@ div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; line-hei
 
 .input_group { float: right; }
 #div_login_form { height: 330px; margin: 60px; }
-#div_login_form .theming { float: left; margin-left: 300px; padding: 60px; width: 250px; }
+#div_login_form .theming { float: left; margin-left: 250px; padding: 60px; width: 250px; }
 #div_login_form .theming h1 { float: left; text-indent: -99999px; background: url(../img/frantic.png) no-repeat left top; width: 158px; height: 32px; display: block; margin: 0px 8px 10px;  }
 #div_login_form .theming h2 { float: left; font-size: 95px; margin: 0px; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; line-height: 90px; }
 #login_form { float: left; border-left: 1px solid #97d937; height: 100%; padding:60px; width: 500px; }
@@ -149,6 +149,6 @@ UL.root LI { line-height: 20px; margin: 10px; }
 #upload_form label { float: left; line-height: 40px; }
 #fake_upload { float: left; margin-left: 20px; background-color: #97d937; color: #000000; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; width: 110px; }
 
-@media (max-width: 1510px) {
+@media (max-width: 1462px) {
 	#login_form { border-left: 0px; }
 }
