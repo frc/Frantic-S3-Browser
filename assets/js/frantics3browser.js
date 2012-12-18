@@ -140,7 +140,7 @@ var FranticS3Browser = function () {
                         success: function(data) {
                             $login_form.hide();
                             $login_error.hide();
-                            $div_logout_form.show();
+                            $("#logout").show();
                             $bucketlist.show();
                             $div_upload_form.show();
                             $("#div_login_form").addClass('login');
