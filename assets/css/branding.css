@@ -136,6 +136,7 @@ div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; }
 #div_login_form .theming h2 { float: left; font-size: 95px; margin: 0px; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; }
 #login_form { float: left; border-left: 1px solid #97d937; height: 100%; padding:60px; width: 600px; }
 #login_form label { font-size: 30px; color: #97d937; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; }
+#login { float: right; font-size: 30px; color: #97d937; font-family: 'OpenSansLight', sans-serif; font-weight: normal; font-style: normal; }
 
 div#login_error { background-color: #000000; clear: both; }
 
