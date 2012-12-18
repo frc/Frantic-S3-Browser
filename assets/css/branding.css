@@ -149,6 +149,6 @@ UL.root LI { line-height: 20px; margin: 10px; }
 #upload_form label { float: left; line-height: 40px; }
 #fake_upload { float: left; margin-left: 20px; background-color: #97d937; color: #000000; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; width: 110px; }
 
-@media (max-width: 1410px) {
+@media (max-width: 1510px) {
 	#login_form { border-left: 0px; }
 }
