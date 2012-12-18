@@ -145,8 +145,8 @@ div#login_error { background-color: #000000; clear: both; }
 
 UL.root { border-top: 1px solid #97d937; border-bottom: 1px solid #97d937;  list-style: none; padding:40px; }
 UL.root LI { line-height: 20px; margin: 10px; }
-
+#upload { font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; }
 #div_upload_form { background-color: #000000; border: 3px dashed #97d937; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; padding: 40px 130px; width: 150px; height: 20px; }
 #upload_form { height: 30px; }
-#upload_form label { float: left; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; }
+#upload_form label { float: left; }
 #fake_upload { float: left; margin-left: 20px; background-color: #97d937; color: #000000; font-family: 'OpenSansExtrabold', sans-serif; font-weight: normal; font-style: normal; font-size: 18px; width: 110px; }
