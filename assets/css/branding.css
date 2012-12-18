@@ -129,7 +129,7 @@ div#div_login_form input[type="text"]{ padding-left: 20px; height: 39px; border:
 div#div_login_form input[type="submit"]{ clear: both; float: right; background-color: #97d937; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; border: 0px; font-family: 'OpenSansLight', sans-serif; font-size: 30px; padding: 5px 30px; font-weight: normal; font-style: normal; margin-right: 10px }
 div#div_login_form.login { height: 70px; margin: 0; }
 div#div_login_form.login .theming { height: 50px; width: 100%; margin: 0px; padding: 20px 0px; }
-div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; }
+div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; line-height: 35px; }
 
 	
 .input_group { float: right; }
