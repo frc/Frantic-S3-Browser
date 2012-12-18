@@ -10,7 +10,7 @@ div#div_login_form input[type="text"] { width: 200px; }
 
 div#bucketlist { display: none; }
 div#upload { display: none; }
-div#div_logout_form { display: none; }
+#logout { display: none; }
 div#login_error { display: none; background-color: #f00; padding: 5px; width: auto; }
 
 /* Dropzone effect */
