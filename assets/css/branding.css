@@ -125,7 +125,7 @@ div { background-color: #000000; }
 div#div_login_form input[type="text"]{ padding-left: 20px; height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; font-family: 'OpenSans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; color: #000000; }
 div#div_login_form input[type="submit"]{ clear: both; float: left; }
 div#div_login_form.login { height: 50px; margin: 0; }
-div#div_login_form.login .theming { height: 50px; width: 100%; margin: 0px; }
+div#div_login_form.login .theming { height: 50px; width: 100%; margin: 0px; padding: 20px 0px; }
 div#div_login_form.login .theming h2 { font-size: 32px; margin: 0 20px; }
 
 
