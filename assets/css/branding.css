@@ -124,7 +124,7 @@ body { background-color: #000000; color: #97d937; font-size: 30px; font-family: 
 div { background-color: #000000; }
 div#div_login_form input[type="text"]{ padding-left: 20px; height: 39px; border: 0px; background-color: #FFFFFF; width: 295px; margin: 10px; font-family: 'OpenSans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; color: #000000; }
 div#div_login_form input[type="submit"]{ clear: both; float: left; }
-
+div#div_login_form.loggin { height: 200px; }
 .input_group { float: right; }
 #div_login_form { height: 330px; margin: 60px; }
 #div_login_form .theming { float: left; margin-left: 300px; padding: 60px; }
