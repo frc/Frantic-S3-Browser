@@ -173,7 +173,7 @@ var FranticS3Browser = function () {
                     signature: aws_signature,
                     'Content-Type': 'application/octet-stream'
                 },
-                done: function(){ alert('uploaded'); }
+                done: function(){ init_bucketlist(); }
             });
     };
     
