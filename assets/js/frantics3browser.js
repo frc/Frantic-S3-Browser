@@ -142,6 +142,7 @@ var FranticS3Browser = function () {
                             $login_error.hide();
                             $("#logout").show();
                             $bucketlist.show();
+                            set_location_hash({'bucket': bucket, 'aws_access_key_id': aws_access_key_id, 'aws_secret_access_key': aws_secret_access_key});
                             $div_upload_form.show();
                             $("#div_login_form").addClass('login');
                             var contents = jQuery(data).find('Contents');
@@ -199,22 +200,27 @@ var FranticS3Browser = function () {
     }
 
     var init_from_hash = function (arg_hash) {
-            qs = location_hash(arg_hash);
-            if (qs.bucket) {
-                $login_form.find('input[name=bucket]').val(qs.bucket);
-            }
-            if (qs.aws_access_key_id) {
-                $login_form.find('input[name=aws_access_key_id]').val(qs.aws_access_key_id);
-            }
-            if (qs.aws_secret_access_key) {
-                $login_form.find('input[name=aws_secret_access_key]').val(qs.aws_secret_access_key);
-            }
+        qs = location_hash(arg_hash);
+        if (qs.bucket) {
+            $login_form.find('input[name=bucket]').val(qs.bucket);
+        }
+        if (qs.aws_access_key_id) {
+            $login_form.find('input[name=aws_access_key_id]').val(qs.aws_access_key_id);
+        }
+        if (qs.aws_secret_access_key) {
+            $login_form.find('input[name=aws_secret_access_key]').val(qs.aws_secret_access_key);
+        }
     };
+
+    var set_location_hash = function (args) {
+        window.location.hash = 'bucket=BUCKET&aws_access_key_id=JOO&aws_secret_access_key=JOO';
+    };
+        
     var init_autosubmit = function () {
-            // Auto-submit form if all 3 params were given in qs
-            if (qs.bucket && qs.aws_access_key_id && qs.aws_secret_access_key) {
-                $login_form.submit();
-            }
+        // Auto-submit form if all 3 params were given in qs
+        if (qs.bucket && qs.aws_access_key_id && qs.aws_secret_access_key) {
+            $login_form.submit();
+        }
     };
 
     var init_dropzone_effect = function () {
