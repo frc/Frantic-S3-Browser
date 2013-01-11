@@ -214,7 +214,7 @@ var FranticS3Browser = function () {
     };
 
     var set_location_hash = function (args) {
-        window.location.hash = 'bucket=BUCKET&aws_access_key_id=JOO&aws_secret_access_key=JOO';
+        window.location.hash = 'bucket=' + encodeURIComponent(bucket) + '&aws_access_key_id=' + encodeURIComponent(aws_access_key_id) + '&aws_secret_access_key=' + encodeURIComponent(aws_secret_access_key);
     };
         
     var init_autosubmit = function () {
