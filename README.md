@@ -74,7 +74,7 @@ Setup: The bucket for a single customer's/project's data
    {
     "Statement": [
     {
-      "Sid": "Stmt1353931095381",
+      "Sid": "Stmnt1",
       "Action": [
         "s3:*"
       ],
