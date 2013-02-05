@@ -11,7 +11,7 @@ to S3 enabling you and your users to download and upload files in buckets.
 Setup: The website bucket for Frantic-S3-Browser
 ================================================
 ( If you want to quickly try out Frantic-S3-Browser you can skip this step and just use
-http://frc.github.com/Frantic-S3-Browser/ )
+http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Ireland) Region )
 
  - Add a new bucket using https://console.aws.amazon.com/s3/home - pay attention
    that you place the bucket in the region you want it to be in. This bucket
@@ -42,6 +42,10 @@ http://frc.github.com/Frantic-S3-Browser/ )
    Select the "Website Access" tab in Properties. Check Enabled [X], specify
    "index.html" as the Index Document and "error.html" as the Error Document.
    Note the endpoint Amazon gives to you and write it down. Press Save.
+
+ - Customize the s3_endpoint at the end of the index.html file. It is set to EU (Ireland) Region
+   endpoint by default. See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region
+   for a listing of proper endpoints.
 
  - Upload all files of Frantic-S3-Browser to the root of the website bucket you just created.
 
