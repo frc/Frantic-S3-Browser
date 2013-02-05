@@ -126,6 +126,10 @@ var FranticS3Browser = function () {
         $bucketlist.html(out);
     };
 
+    var set_endpoint = function (endpoint) {
+        s3url = '.' + endpoint;
+    };
+
     var init_bucketlist = function () {
         var expires = new Date().valueOf();
         expires = parseInt(expires/1000); // milliseconds to seconds
@@ -250,6 +254,7 @@ var FranticS3Browser = function () {
             set_aws_access_key_id(args);
         },
         init: function (args) {
+            set_endpoint(args.s3_endpoint);
             init_login_form(args.login_form, args.login_error);
             init_logout_form(args.logout_form, args.div_logout_form);
             init_from_hash(args.hash);
