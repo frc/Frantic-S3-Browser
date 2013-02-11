@@ -117,7 +117,7 @@ var FranticS3Browser = function () {
             expires = parseInt(expires/1000); // milliseconds to seconds
             expires += 21600; // signed request valid for 6 hours
             var signature = sign_api(expires, '/' + name);
-            var paramsdata = {'AWSAccessKeyId': aws_access_key_id, 'Signature': signature, 'Expires': expires};
+            var paramsdata = {'AWSAccessKeyId': aws_access_key_id, 'Signature': signature, 'Expires': expires, 'response-content-disposition': 'attachment'};
             url += '?' + jQuery.param(paramsdata);
 
             out += '<li class="' + klass + '"><a href="' + url + '">' + title + '</a>' + '</li>';
