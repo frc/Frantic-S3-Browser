@@ -111,14 +111,17 @@ var FranticS3Browser = function () {
 
             var klass = 'file';
             var title = name;
-            var url = protocolurl + bucket + s3url + '/' + name;
+            var url = protocolurl + bucket + s3url;
 
             var expires = new Date().valueOf();
             expires = parseInt(expires/1000); // milliseconds to seconds
             expires += 21600; // signed request valid for 6 hours
-            var signature = sign_api(expires, '/' + name);
-            var paramsdata = {'AWSAccessKeyId': aws_access_key_id, 'Signature': signature, 'Expires': expires, 'response-content-disposition': 'attachment'};
-            url += '?' + jQuery.param(paramsdata);
+            var signedparamsdata = {'response-cache-control': 'No-cache', 'response-content-disposition': 'attachment'};
+            var signedurl = '/' + name + '?' + jQuery.param(signedparamsdata);
+            var signature = sign_api(expires, signedurl);
+
+            var paramsdata = {'AWSAccessKeyId': aws_access_key_id, 'Signature': signature, 'Expires': expires};
+            url += signedurl + '&' + jQuery.param(paramsdata);
 
             out += '<li class="' + klass + '"><a href="' + url + '">' + title + '</a>' + '</li>';
         }
