@@ -61,6 +61,7 @@ Setup: The bucket for a single customer's/project's data
  - Add a CORS policy to enable API requests
    Go back to Permissions tab and press "Add a CORS policy". Paste this in:
 
+```
    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
    &lt;CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
        &lt;CORSRule&gt;
@@ -70,11 +71,13 @@ Setup: The bucket for a single customer's/project's data
            &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
        &lt;/CORSRule&gt;
    &lt;/CORSConfiguration&gt;
+```
 
  - Add the user to access the bucket. Go to IAM, add a new user.
    Save the Security Credentials, you will need them later in the setup.
    Select the user's Permissions tab and add a Policy as follows.
 
+```
    {
     "Statement": [
     {
@@ -89,6 +92,7 @@ Setup: The bucket for a single customer's/project's data
     }
     ]
    }
+```
 
  - Repeat this procedure for each customer/project bucket you need.
 
