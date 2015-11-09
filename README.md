@@ -23,6 +23,7 @@ http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Irel
    "Add Bucket Policy". Paste this in, replacing "YOURBUCKETNAME" with the name
    of your bucket, and save the policy:
 
+```
    {
     "Version": "2008-10-17",
     "Statement": [
@@ -37,7 +38,7 @@ http://frc.github.com/Frantic-S3-Browser/ and create your bucket in the EU (Irel
              }
     ]
    }
-
+```
  - Enable Website Access
    Select the "Website Access" tab in Properties. Check Enabled [X], specify
    "index.html" as the Index Document and "error.html" as the Error Document.
@@ -62,15 +63,15 @@ Setup: The bucket for a single customer's/project's data
    Go back to Permissions tab and press "Add a CORS policy". Paste this in:
 
 ```
-   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-   &lt;CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
-       &lt;CORSRule&gt;
-           &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
-           &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
-           &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
-           &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
-       &lt;/CORSRule&gt;
-   &lt;/CORSConfiguration&gt;
+   <xml version="1.0" encoding="UTF-8"?>
+   <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+       <CORSRule>
+           <AllowedOrigin>*</AllowedOrigin>
+           <AllowedMethod>POST</AllowedMethod>
+           <AllowedMethod>GET</AllowedMethod>
+           <AllowedHeader>*</AllowedHeader>
+       </CORSRule>
+   </CORSConfiguration>
 ```
 
  - Add the user to access the bucket. Go to IAM, add a new user.
