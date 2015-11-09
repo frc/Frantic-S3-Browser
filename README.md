@@ -110,7 +110,7 @@ http://blog.mashupguide.net/2008/11/25/amazon-s3-signature-calculation-in-javasc
 
 Copyright
 =========
-Copyright (c) 2012-2013, Oskari Ojala, Lauri Kallioniemi, Miika Puputti, Frantic Oy
+Copyright (c) 2012-2015, Oskari Ojala, Lauri Kallioniemi, Miika Puputti, Frantic Oy
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
